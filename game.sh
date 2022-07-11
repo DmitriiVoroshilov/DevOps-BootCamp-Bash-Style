@@ -17,7 +17,8 @@ while [ $ch -ne 3 ]; do
     read -r -p "Enter any number between 0 and 9 : " n
 
     while [ $c -eq 0 ]; do
-      x=11; r=($(shuf -i 0-9 -n 10))
+      x=11; r=("$(shuf -i 0-9 -n 10)")
+ 
       echo "${r[@]}"
 
       for i in {1..10}; do
@@ -35,7 +36,7 @@ while [ $ch -ne 3 ]; do
 
       if [[ "${r[$((x))-1]}" -eq $n ]]; then
         echo "Great"
-        p=($(p+1))
+        p=$(p+1)
       else
         c=1
         break
