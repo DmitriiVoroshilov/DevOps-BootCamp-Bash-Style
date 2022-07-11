@@ -9,7 +9,8 @@ while [ $ch -ne 3 ]; do
   HELP : Hit 2 and enter.
   EXIT : Hit 3 and enter.
   "
-read -r -p "Enter your choice : " ch
+  
+  read -r -p "Enter your choice : " ch
 
   if [ "$ch" -eq 1 ]; then
     x=0 ;c=0 ;p=0
@@ -17,7 +18,6 @@ read -r -p "Enter your choice : " ch
 
     while [ $c -eq 0 ]; do
       x=11; r=($(shuf -i 0-9 -n 10))
-      
       echo "${r[@]}"
 
       for i in {1..10}; do
